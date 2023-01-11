@@ -12,7 +12,7 @@
 
 # 1. POJO Class
 
-### POJO Sample Code
+### POJO Sample Code (Java Beans, special type of POJO classes)
 
 ```java
 package com.integrallis.TechConf.domain;
@@ -21,9 +21,11 @@ import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-public class Address implements Serializable {
+public class Address implements Serializable { // must implement the Serializable interface
+
     // primary key
     private Integer id;
+
     // fields
     private String streetAddress;
     private String state;
@@ -31,7 +33,7 @@ public class Address implements Serializable {
     private String city;
     private String aptNumber;
 
-    // constructors
+    // default no-argument constructor
     public Address () {}
 
     // ...getters and setters
