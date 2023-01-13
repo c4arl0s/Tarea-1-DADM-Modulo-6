@@ -5,8 +5,6 @@
 # Instrucciones
 
 1. Investigue qué es una clase POJO en Java, su equivalente en Kotlin y alguna herramienta que le ayude a generarlos fácil y rápidamente.
-
-
 2. Busque la librería Glide y Picasso en Android. Indique para qué nos sirven e incluya un ejemplo de uso de cada una en una app (agregando el código Kotlin y comentando su implementación).
 3. Agregue sus referencias.
 
@@ -84,5 +82,77 @@ public class Address implements Serializable { // must implement the Serializabl
 ```
 
 # 2. GLIDE and PICASSO Libraries in Android
+
+# Glide
+
+Glide es un rapido y eficiente framework para cargar y manejar imagenes. Es simple la manera en la que maneja la memoria y cache de disco para Android.
+Glide soporta carga, decodificacion, imagenes,  GIFs animados y video. [Click para ir al repositorio](https://github.com/bumptech/glide)
+
+Para su uso dentro de `onViewCreated()`, dentro de un fragment.
+
+```kotlin
+override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+
+    binding = FragmentDetailBinding.bind(view)
+    user = args.user
+    binding.user = args.user
+
+    Glide.with(binding.root.context).load(user?.image).into(binding.userImageIV)
+}
+```
+
+Para su uso dentro de una clase `ViewHolder` de un `RecyclerView`:
+
+```kotlin
+class UserViewHolder(private val binding: UserItemBinding) : RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(user: User, onItemClick: ((User) -> Unit)?) {
+
+            binding.user = user
+            Glide.with(binding.root).load(user.image).into(binding.userImageIV)
+
+            binding.userCard.setOnClickListener {
+                onItemClick?.invoke(user)
+            }
+        }
+    }
+```
+
+![Screen Recording 2022-11-22 at 12 44 10 a m 2022-11-22 12_52_06 a m](https://user-images.githubusercontent.com/24994818/212422038-99835305-ebf5-4fd8-a351-d23889fffe22.gif)
+
+# Picasso
+
+Una potente biblioteca de descarga y almacenamiento en caché de imágenes para Android.
+ 
+```java
+Picasso.get().load("https://i.imgur.com/DvpvklR.png").into(imageView);
+```
+
+### AAdapter Downloads
+
+La reutilización del adaptador se detecta automáticamente y la descarga anterior se cancela.
+
+```java
+@Override public void getView(int position, View convertView, ViewGroup parent) {
+  SquaredImageView view = (SquaredImageView) convertView;
+  if (view == null) {
+    view = new SquaredImageView(context);
+  }
+  String url = getItem(position);
+
+  Picasso.get().load(url).into(view);
+}
+```
+
+### Transformacion de imagenes
+
+```java
+Picasso.get()
+  .load(url)
+  .resize(50, 50)
+  .centerCrop()
+  .into(imageView)
+``
 
 # 3. Referencias
