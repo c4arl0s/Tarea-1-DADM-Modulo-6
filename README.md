@@ -1,14 +1,17 @@
 # Tarea-1-DADM-Modulo-6
 
- Investigar elementos y/o bibliotecas que ayuden al consumo de REST APIs en Android.
+- Nombre: Carlos Santiago Cruz
+- Fecha: 13 de Enero del 2023
+
+Investigar elementos y/o bibliotecas que ayuden al consumo de REST APIs en Android.
 
 # Instrucciones
 
-1. [Investigue qué es una clase POJO en Java, su equivalente en Kotlin y alguna herramienta que le ayude a generarlos fácil y rápidamente.]()
-2. [Busque la librería Glide y Picasso en Android. Indique para qué nos sirven e incluya un ejemplo de uso de cada una en una app (agregando el código Kotlin y comentando su implementación).]()
-3. [Agregue sus referencias.]()
+1. [Investigue qué es una clase POJO en Java, su equivalente en Kotlin y alguna herramienta que le ayude a generarlos fácil y rápidamente.](https://github.com/c4arl0s/Tarea-1-DADM-Modulo-6#1-pojo-class)
+2. [Busque la librería Glide y Picasso en Android. Indique para qué nos sirven e incluya un ejemplo de uso de cada una en una app (agregando el código Kotlin y comentando su implementación).](https://github.com/c4arl0s/Tarea-1-DADM-Modulo-6#2-glide-and-picasso-libraries-in-android)
+3. [Agregue sus referencias.](https://github.com/c4arl0s/Tarea-1-DADM-Modulo-6#3-referencias)
 
-# [1. POJO Class]()
+# [1. POJO Class](https://github.com/c4arl0s/Tarea-1-DADM-Modulo-6#tarea-1-dadm-modulo-6)
 
 Java 2EE servia servia para desarrollar aplicaciones Enterprise con servicios transversales, de este se desprendian tres componentes principales:
 
@@ -91,7 +94,7 @@ public class Address implements Serializable { // must implement the Serializabl
 }
 ```
 
-# 2. [GLIDE and PICASSO Libraries in Android]()
+# 2. [GLIDE and PICASSO Libraries in Android](https://github.com/c4arl0s/Tarea-1-DADM-Modulo-6#tarea-1-dadm-modulo-6)
 
 # Glide
 
@@ -165,7 +168,7 @@ Picasso.get()
   .into(imageView)
 ```
 
-# 3. [Referencias]()
+# 3. [Referencias](https://github.com/c4arl0s/Tarea-1-DADM-Modulo-6#tarea-1-dadm-modulo-6)
 
 - Sam-Bodden, Brian (2006) Beginning POJOs: From Novice to Professional, New York, NY, Por Apress
 
