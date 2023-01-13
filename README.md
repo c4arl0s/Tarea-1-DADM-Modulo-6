@@ -4,11 +4,21 @@
 
 # Instrucciones
 
-1. Investigue qué es una clase POJO en Java, su equivalente en Kotlin y alguna herramienta que le ayude a generarlos fácil y rápidamente.
-2. Busque la librería Glide y Picasso en Android. Indique para qué nos sirven e incluya un ejemplo de uso de cada una en una app (agregando el código Kotlin y comentando su implementación).
-3. Agregue sus referencias.
+1. [Investigue qué es una clase POJO en Java, su equivalente en Kotlin y alguna herramienta que le ayude a generarlos fácil y rápidamente.]()
+2. [Busque la librería Glide y Picasso en Android. Indique para qué nos sirven e incluya un ejemplo de uso de cada una en una app (agregando el código Kotlin y comentando su implementación).]()
+3. [Agregue sus referencias.]()
 
-# 1. POJO Class
+# [1. POJO Class]()
+
+Java 2EE servia servia para desarrollar aplicaciones Enterprise con servicios transversales, de este se desprendian tres componentes principales:
+
+1. Session Bean
+2. Message Bean
+3. Entity Bean (Complejo)
+
+Cada una tenia una tarea muy en particular. Entity Bean manejaba objetos muy complejos, los cuales los persistia contra una base de datos. Estos contenian muchas interfaces.
+
+Para solventar el problema nacio un framework llamado Hibernate, el cual usaba solo clases basicas o normales, y las cuales por su simplesa se podian persistir en la base de datos. A esta clase basica se le llamo POJO por sus siglas (Plain Old Java Object). 
 
 ### POJO Sample Code (Java Beans, special type of POJO classes)
 
@@ -81,7 +91,7 @@ public class Address implements Serializable { // must implement the Serializabl
 }
 ```
 
-# 2. GLIDE and PICASSO Libraries in Android
+# 2. [GLIDE and PICASSO Libraries in Android]()
 
 # Glide
 
@@ -153,6 +163,9 @@ Picasso.get()
   .resize(50, 50)
   .centerCrop()
   .into(imageView)
-``
+```
 
-# 3. Referencias
+# 3. [Referencias]()
+
+- Sam-Bodden, Brian (2006) Beginning POJOs: From Novice to Professional, New York, NY, Por Apress
+
